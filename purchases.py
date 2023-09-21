@@ -22,7 +22,7 @@ for i in range(num_purchases):
 #function to add tax
 def add_tax(my_list, tax):
     for i in range(len(my_list)):
-        tax_cost = my_list[i]*tax
+        tax_cost = my_list[i]*(1+tax)
         cost_list_tax.append(tax_cost)
 
 #adds the tax
