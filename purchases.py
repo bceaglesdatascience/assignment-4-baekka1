@@ -30,7 +30,10 @@ add_tax(cost_list, sales_tax)
 
 #adds to dictionary
 for i in range(len(customer_list)):
-    dictionary[customer_list[i]] = cost_list_tax[i]
+    if customer_list[i] in dictionary:
+        dictionary[customer_list[i]] += cost_list_tax[i]
+    else:
+        dictionary[customer_list[i]] = cost_list_tax[i]
 
 #prints dictionary
 print(dictionary)
